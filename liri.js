@@ -165,5 +165,52 @@ function spotifyInfo() {
 
         // console.log(console.log(util.inspect(data, { depth: null, colors: true })));
     })
+
+// Function to get last 20 tweets
+function twitterInfo() {
+
+    var Twitter = require('twitter');
+    var client = new Twitter(liriKeys.twitter);
+    // console.log(client);
+
+    // / Search parameters to get last 20 tweets
+    var params = {
+        q: 'gatech_anish',
+        // q: 'node.js',
+        count: 20
+    };
+
+    // Display last 20 tweets
+    client.get('search/tweets', params, function (error, tweets, response) {
+        if (!error) {
+
+            // console.log(tweets);
+            // console.log("Tweet Status: " + tweets.statuses);
+            // console.log(util.inspect(tweets.statuses, { depth: null, colors: true }));
+
+            // Loops through tweets and prints out tweet text and creation date
+            console.log("================================================================================================");
+
+            for (var i = 0; i < tweets.statuses.length; i++) {
+
+                // console.log(tweets.statuses);
+                var tweetText = tweets.statuses[i].text;                
+
+                var tweetCreationDate = tweets.statuses[i].created_at;
+                // console.log(tweetCreationDate);
+                console.log("Tweet# " + [i + 1]);
+                console.log(" * Tweet Creation Date: " + tweetCreationDate);
+
+                // console.log("Tweet text is " + tweetText);
+                // console.log("Tweet# " + [i + 1] + ": Tweet text is " + tweetText);
+                console.log(" * Tweet text: " + tweetText);
+
+            }
+        } else {
+            console.log(error);
+        }
+        console.log("================================================================================================");
+    });
+
 }
 
