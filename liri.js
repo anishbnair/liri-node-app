@@ -4,23 +4,17 @@ require("dotenv").config();
 
 var util = require('util');
 
+// Load keys.js file
 var liriKeys = require("./keys.js");
-
-
-// Include the request npm package
-var request = require("request");
-
-// Load the fs package to read and write
-var fs = require("fs");
 
 // Store Liri Bot actions (i.e. "my-tweets", "spotify-this-song", "movie-this", "do-what-it-says")
 var liriBotAction = process.argv[2];
 
-// Create an empty variable for holding the user response
-var userResponse = "";
+// Create an empty variable for holding the user response (e.g. movie/song name)
+var userInput = "";
 
 
-// Function to get movie/song name
+// Function to get the value of 3rd argument (process.argv[3]) which is the user input (i.e. movie/song name)
 function getArgValue() {
 
     // Store all of the arguments in an array
@@ -31,63 +25,76 @@ function getArgValue() {
 
         if (i > 3 && i < nodeArgs.length) {
 
-            userResponse = userResponse + "+" + nodeArgs[i];
-            // console.log(songName);
+            userInput = userInput + "+" + nodeArgs[i];
 
         } else {
 
-            userResponse += nodeArgs[i];
-            // console.log(songName);
+            userInput += nodeArgs[i];
         }
     }
-    return userResponse;
+    return userInput;
 }
 
+// calls Liri Bot main function
+liriBot(liriBotAction, userInput);
 
-// Switch-case statement and it will direct which function gets run
-switch (liriBotAction) {
+// Liri Bot Main function
+function liriBot(liriBotAction, userInput) {
 
-    case "movie-this":
-        userResponse = getArgValue();
-        console.log(userResponse);
+    userInput = getArgValue();
 
-        if (userResponse === "") {
-            userResponse = "Mr. Nobody";
-            console.log("Displaying the details of movie: Mr. Nobody since you haven't entered any movie name");
-            console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
-            console.log("It's on Netflix!");
-            movieInfo();
-        } else {
-            movieInfo();
-        }
-        break;
+    // Switch-case statement and it will direct which function gets run
+    switch (liriBotAction) {
 
-    case "spotify-this-song":
-        userResponse = getArgValue();
-        // console.log(userResponse);
+        case "movie-this":
+            var movieName = "";
+            movieName = userInput;
 
-        if (userResponse === "") {
-            userResponse = "The sign Ace of Base";
-            spotifyInfo();
-        } else {
-            spotifyInfo();
-        }
-        break;
+            if (movieName === "") {
+                console.log("*********************************************************************************************");
+                console.log("Displaying the details of movie: Mr. Nobody since you haven't entered any movie name");
+                console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
+                console.log("It's on Netflix!");
+                console.log("*********************************************************************************************");
+                movieInfo("Mr. Nobody");
+            } else {
+                movieInfo(movieName);
+            }
+            break;
 
-    case "my-tweets":
-        twitterInfo();
-        break;
+        case "spotify-this-song":
+            var songName = "";
+            songName = userInput;
+
+            if (userInput === "") {
+                spotifyInfo("The sign Ace of Base");
+            } else {
+                spotifyInfo(songName);
+            }
+            break;
+
+        case "my-tweets":
+            twitterInfo();
+            break;
+
+        case "do-what-it-says":
+            doWhatItSays();
+            break;
+    }
+
 }
-
 
 // Function to get movie details
-function movieInfo() {
+function movieInfo(movieName) {
+
+    // Include the request npm package
+    var request = require("request");
 
     // OMDB API
     var movieAPI = "1f19de3a";
 
     // Then run a request to the OMDB API with the movie specified
-    var movieQueryUrl = "http://www.omdbapi.com/?t=" + userResponse + "&y=&plot=short&apikey=" + movieAPI;
+    var movieQueryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + movieAPI;
 
     // console.log(movieQueryUrl);
 
@@ -180,14 +187,14 @@ function twitterInfo() {
 }
 
 // Function to get song details from Spotify
-function spotifyInfo() {
+function spotifyInfo(songName) {
 
     var Spotify = require('node-spotify-api');
     var spotify = new Spotify(liriKeys.spotify);
     // console.log(liriKeys.spotify);
 
     // Spotify search with limit 1
-    spotify.search({ type: 'track', query: userResponse, limit: 1 }, function (err, data) {
+    spotify.search({ type: 'track', query: songName, limit: 1 }, function (err, data) {
         // spotify.search({ type: 'track', query: songName }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
@@ -212,5 +219,31 @@ function spotifyInfo() {
 
         // console.log(console.log(util.inspect(data, { depth: null, colors: true })));
     })
+}
+
+
+function doWhatItSays() {
+
+    // Load the fs package to read and write
+    var fs = require("fs");
+
+    fs.readFile("random.txt", "utf8", function (err, data) {
+        if (err) {
+            return console.log(err);
+        } else {
+
+            // Create an array with data
+            var inputArray = data.split(",");
+
+            // Store the first value of the array (i.e. action) to liriBotAction varibale
+            liriBotAction = inputArray[0];
+
+            // Store the second value of the array (i.e. user input) to userInput
+            userInput = inputArray[1];
+
+            liriBot(liriBotAction, userInput);
+
+        }
+    });
 }
 
