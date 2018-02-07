@@ -56,7 +56,7 @@ function liriBot(liriBotAction, userInput) {
                 // console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
                 // console.log("It's on Netflix!");
                 // console.log("*********************************************************************************************");
-                logResult("\n");
+                // logResult("\n");
                 logResult("*********************************************************************************************");
                 logResult("Displaying details of movie: Mr. Nobody since you haven't entered any movie name.");
                 logResult("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
@@ -118,7 +118,7 @@ function movieInfo(movieName) {
             // console.log("* Release Year: " + movieDetails.Year);
             // console.log("* IMDB Rating: " + movieDetails.imdbRating);
 
-            logResult("\n");
+            // logResult("\n");
             logResult("================================================================================================");
             logResult("* Title of the movie: " + movieDetails.Title);
             logResult("* Release Year: " + movieDetails.Year);
@@ -154,7 +154,8 @@ function movieInfo(movieName) {
             logResult("* Language of the movie: " + movieDetails.Language);
             logResult("* Plot of the movie: " + movieDetails.Plot);
             logResult("* Actors in the movie: " + movieDetails.Actors);
-            logResult("================================================================================================");            
+            logResult("================================================================================================"); 
+            logResult("\n");           
         }
     })
 }
@@ -183,7 +184,7 @@ function twitterInfo() {
 
             // Loops through tweets and prints out tweet text and creation date
             // console.log("================================================================================================");
-            logResult("\n");
+            // logResult("\n");
             logResult("================================================================================================");
             logResult("Your last 20 tweets are below (displaying lastest tweet first): ");
 
@@ -211,6 +212,7 @@ function twitterInfo() {
         }
         // console.log("================================================================================================");
         logResult("================================================================================================");
+        logResult("\n");
     });
 }
 
@@ -225,7 +227,8 @@ function spotifyInfo(songName) {
     spotify.search({ type: 'track', query: songName, limit: 1 }, function (err, data) {
         // spotify.search({ type: 'track', query: songName }, function (err, data) {
         if (err) {
-            return console.log('Error occurred: ' + err);
+            // return console.log('Error occurred: ' + err);
+            return logResult('Error occurred: ' + err);
         }
 
         var songTracks = data.tracks.items;
@@ -237,15 +240,23 @@ function spotifyInfo(songName) {
             var artistsName = songTracks[i].album.artists[i].name;
             // console.log(artistsName);
 
-            console.log("================================================================================================");
-            console.log("* The song's name: " + songTracks[i].name);
-            console.log("* The album name : " + songTracks[i].album.name);
-            console.log("* Artist(s): " + artistsName);
-            console.log("* Preview link: " + songTracks[i].preview_url);
-            console.log("================================================================================================");
+            // logResult("\n");
+            // console.log("================================================================================================");
+            logResult("================================================================================================");
+            // console.log("* The song's name: " + songTracks[i].name);
+            logResult("* The song's name: " + songTracks[i].name);
+            // console.log("* The album name : " + songTracks[i].album.name);
+            logResult("* The album name : " + songTracks[i].album.name);
+            // console.log("* Artist(s): " + artistsName);
+            logResult("* Artist(s): " + artistsName);
+            // console.log("* Preview link: " + songTracks[i].preview_url);
+            logResult("* Preview link: " + songTracks[i].preview_url);
+            // console.log("================================================================================================");
+            logResult("================================================================================================");
+            logResult("\n");
         }
 
-        // console.log(console.log(util.inspect(data, { depth: null, colors: true })));
+        // console.log(util.inspect(data, { depth: null, colors: true }));
     })
 }
 
