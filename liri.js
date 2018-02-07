@@ -51,11 +51,16 @@ function liriBot(liriBotAction, userInput) {
             movieName = userInput;
 
             if (movieName === "") {
-                console.log("*********************************************************************************************");
-                console.log("Displaying details of movie: Mr. Nobody since you haven't entered any movie name");
-                console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
-                console.log("It's on Netflix!");
-                console.log("*********************************************************************************************");
+                // console.log("*********************************************************************************************");
+                // console.log("Displaying details of movie: Mr. Nobody since you haven't entered any movie name");
+                // console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
+                // console.log("It's on Netflix!");
+                // console.log("*********************************************************************************************");
+                logResult("*********************************************************************************************");
+                logResult("Displaying details of movie: Mr. Nobody since you haven't entered any movie name.");
+                logResult("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
+                logResult("It's on Netflix!");
+                logResult("*********************************************************************************************");
                 movieInfo("Mr. Nobody");
             } else {
                 movieInfo(movieName);
@@ -107,10 +112,15 @@ function movieInfo(movieName) {
             // Parse the body of the site and recover the movie details
             var movieDetails = JSON.parse(body);
             // console.log(movieDetails);
-            console.log("================================================================================================");
-            console.log("* Title of the movie: " + movieDetails.Title);
-            console.log("* Release Year: " + movieDetails.Year);
-            console.log("* IMDB Rating: " + movieDetails.imdbRating);
+            // console.log("================================================================================================");
+            // console.log("* Title of the movie: " + movieDetails.Title);
+            // console.log("* Release Year: " + movieDetails.Year);
+            // console.log("* IMDB Rating: " + movieDetails.imdbRating);
+
+            logResult("================================================================================================");
+            logResult("* Title of the movie: " + movieDetails.Title);
+            logResult("* Release Year: " + movieDetails.Year);
+            logResult("* IMDB Rating: " + movieDetails.imdbRating);            
 
             var movieRating = movieDetails.Ratings;
             // console.log(rating);
@@ -121,20 +131,28 @@ function movieInfo(movieName) {
 
                     if (movieRating[i].Source === "Rotten Tomatoes") {
 
-                        console.log("* Rotten Tomatoes Rating: " + movieRating[i].Value);
+                        // console.log("* Rotten Tomatoes Rating: " + movieRating[i].Value);
+                        logResult("* Rotten Tomatoes Rating: " + movieRating[i].Value);
 
                     }
                 }
 
             } else {
-                console.log("* Rotten Tomatoes Rating: Rating information is not available");
+                // console.log("* Rotten Tomatoes Rating: Rating information is not available");
+                logResult("* Rotten Tomatoes Rating: Rating information is not available");
             }
 
-            console.log("* Country where the movie was produced: " + movieDetails.Country);
-            console.log("* Language of the movie: " + movieDetails.Language);
-            console.log("* Plot of the movie: " + movieDetails.Plot);
-            console.log("* Actors in the movie: " + movieDetails.Actors);
-            console.log("================================================================================================");
+            // console.log("* Country where the movie was produced: " + movieDetails.Country);
+            // console.log("* Language of the movie: " + movieDetails.Language);
+            // console.log("* Plot of the movie: " + movieDetails.Plot);
+            // console.log("* Actors in the movie: " + movieDetails.Actors);
+            // console.log("================================================================================================");
+
+            logResult("* Country where the movie was produced: " + movieDetails.Country);
+            logResult("* Language of the movie: " + movieDetails.Language);
+            logResult("* Plot of the movie: " + movieDetails.Plot);
+            logResult("* Actors in the movie: " + movieDetails.Actors);
+            logResult("================================================================================================");            
         }
     })
 }
@@ -248,7 +266,7 @@ function doWhatItSays() {
     })
 }
 
-// Function to log result in log.txt using NPM package simple-node-logger
+// Function to log result in log.txt and terminal using NPM package simple-node-logger
 function logResult(inputData) {
 
     var SimpleNodeLogger = require("simple-node-logger"),
@@ -258,7 +276,6 @@ function logResult(inputData) {
         }
         log = SimpleNodeLogger.createSimpleLogger(opts);
         log.info(inputData);
-        console.log(inputData);
         // log.color();
 }
 
