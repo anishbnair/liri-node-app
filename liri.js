@@ -268,7 +268,8 @@ function doWhatItSays() {
 
     fs.readFile("random.txt", "utf8", function (err, data) {
         if (err) {
-            return console.log(err);
+            // return console.log(err);
+            return logResult(err);
         } else {
 
             // Create an array to store data from random.txt file
@@ -282,7 +283,6 @@ function doWhatItSays() {
 
             // Calls liriBot main function
             liriBot(liriBotAction, userInput);
-
         }
     })
 }
