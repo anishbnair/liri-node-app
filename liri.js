@@ -7,7 +7,7 @@ var util = require('util');
 // Load keys.js file
 var liriKeys = require("./keys.js");
 
-// Store Liri Bot actions (i.e. "my-tweets", "spotify-this-song", "movie-this", "do-what-it-says")
+// Store Liri Bot actions (i.e. "my-tweets", "spotify-this-song", "movie-this", "do-what-it-says") as per user input
 var liriBotAction = process.argv[2];
 
 // Create an empty variable for holding the user response (e.g. movie/song name)
@@ -52,7 +52,7 @@ function liriBot(liriBotAction, userInput) {
 
             if (movieName === "") {
                 console.log("*********************************************************************************************");
-                console.log("Displaying the details of movie: Mr. Nobody since you haven't entered any movie name");
+                console.log("Displaying details of movie: Mr. Nobody since you haven't entered any movie name");
                 console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
                 console.log("It's on Netflix!");
                 console.log("*********************************************************************************************");
@@ -144,7 +144,7 @@ function twitterInfo() {
 
     var Twitter = require('twitter');
     var client = new Twitter(liriKeys.twitter);
-    // console.log(client);
+    console.log(client);
 
     // / Search parameters to get last 20 tweets
     var params = {
@@ -221,7 +221,7 @@ function spotifyInfo(songName) {
     })
 }
 
-
+// Function for 'do-what-it-says'
 function doWhatItSays() {
 
     // Load the fs package to read and write
@@ -232,7 +232,7 @@ function doWhatItSays() {
             return console.log(err);
         } else {
 
-            // Create an array with data
+            // Create an array to store data from random.txt file
             var inputArray = data.split(",");
 
             // Store the first value of the array (i.e. action) to liriBotAction varibale
@@ -241,9 +241,24 @@ function doWhatItSays() {
             // Store the second value of the array (i.e. user input) to userInput
             userInput = inputArray[1];
 
+            // Calls liriBot main function
             liriBot(liriBotAction, userInput);
 
         }
-    });
+    })
+}
+
+// Function to log result in log.txt using NPM package simple-node-logger
+function logResult(inputData) {
+
+    var SimpleNodeLogger = require("simple-node-logger"),
+        opts = {
+            logFilePath: "./log.txt",
+            timestampFormat: "YYYY-MM-DD HH:mm:ss"
+        }
+        log = SimpleNodeLogger.createSimpleLogger(opts);
+        log.info(inputData);
+        console.log(inputData);
+        // log.color();
 }
 
