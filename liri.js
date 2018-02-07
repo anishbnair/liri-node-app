@@ -56,12 +56,12 @@ function liriBot(liriBotAction, userInput) {
                 // console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
                 // console.log("It's on Netflix!");
                 // console.log("*********************************************************************************************");
-                // logResult("\n");
+                logResult("\n");
                 logResult("*********************************************************************************************");
                 logResult("Displaying details of movie: Mr. Nobody since you haven't entered any movie name.");
                 logResult("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
                 logResult("It's on Netflix!");
-                logResult("*********************************************************************************************");
+                // logResult("*********************************************************************************************");
                 movieInfo("Mr. Nobody");
             } else {
                 movieInfo(movieName);
@@ -92,7 +92,6 @@ function liriBot(liriBotAction, userInput) {
 
 // Function to get movie details
 function movieInfo(movieName) {
-
     // Include the request npm package
     var request = require("request");
 
@@ -118,11 +117,11 @@ function movieInfo(movieName) {
             // console.log("* Release Year: " + movieDetails.Year);
             // console.log("* IMDB Rating: " + movieDetails.imdbRating);
 
-            // logResult("\n");
+            logResult("\n");
             logResult("================================================================================================");
             logResult("* Title of the movie: " + movieDetails.Title);
             logResult("* Release Year: " + movieDetails.Year);
-            logResult("* IMDB Rating: " + movieDetails.imdbRating);            
+            logResult("* IMDB Rating: " + movieDetails.imdbRating);
 
             var movieRating = movieDetails.Ratings;
             // console.log(rating);
@@ -154,8 +153,8 @@ function movieInfo(movieName) {
             logResult("* Language of the movie: " + movieDetails.Language);
             logResult("* Plot of the movie: " + movieDetails.Plot);
             logResult("* Actors in the movie: " + movieDetails.Actors);
-            logResult("================================================================================================"); 
-            logResult("\n");           
+            // logResult("================================================================================================");
+            // logResult("\n");
         }
     })
 }
@@ -184,7 +183,7 @@ function twitterInfo() {
 
             // Loops through tweets and prints out tweet text and creation date
             // console.log("================================================================================================");
-            // logResult("\n");
+            logResult("\n");
             logResult("================================================================================================");
             logResult("Your last 20 tweets are below (displaying lastest tweet first): ");
 
@@ -211,8 +210,8 @@ function twitterInfo() {
             logResult(error);
         }
         // console.log("================================================================================================");
-        logResult("================================================================================================");
-        logResult("\n");
+        // logResult("================================================================================================");
+        // logResult("\n");
     });
 }
 
@@ -234,27 +233,30 @@ function spotifyInfo(songName) {
         var songTracks = data.tracks.items;
         // console.log(songTracks);
 
-        for (var i = 0; i < songTracks.length; i++) {
+        // for (var i = 0; i < songTracks.length; i++) {
 
-            // Artists name
-            var artistsName = songTracks[i].album.artists[i].name;
-            // console.log(artistsName);
+        var i = 0;
+        var song = songTracks[i].name;
+        var albumName = songTracks[i].album.name;
+        // Artists name
+        var artistsName = songTracks[i].album.artists[i].name;
+        var previewUrl = songTracks[i].preview_url;
 
-            // logResult("\n");
-            // console.log("================================================================================================");
-            logResult("================================================================================================");
-            // console.log("* The song's name: " + songTracks[i].name);
-            logResult("* The song's name: " + songTracks[i].name);
-            // console.log("* The album name : " + songTracks[i].album.name);
-            logResult("* The album name : " + songTracks[i].album.name);
-            // console.log("* Artist(s): " + artistsName);
-            logResult("* Artist(s): " + artistsName);
-            // console.log("* Preview link: " + songTracks[i].preview_url);
-            logResult("* Preview link: " + songTracks[i].preview_url);
-            // console.log("================================================================================================");
-            logResult("================================================================================================");
-            logResult("\n");
-        }
+        logResult("\n");
+        // console.log("================================================================================================");
+        logResult("================================================================================================");
+        // console.log("* The song's name: " + songTracks[i].name);
+        logResult("* The song's name: " + song);
+        // console.log("* The album name : " + songTracks[i].album.name);
+        logResult("* The album name : " + albumName);
+        // console.log("* Artist(s): " + artistsName);
+        logResult("* Artist(s): " + artistsName);
+        // console.log("* Preview link: " + songTracks[i].preview_url);
+        logResult("* Preview link: " + previewUrl);
+        // console.log("================================================================================================");
+        // logResult("================================================================================================");
+        // logResult("\n");
+        // }
 
         // console.log(util.inspect(data, { depth: null, colors: true }));
     })
@@ -295,8 +297,8 @@ function logResult(inputData) {
             logFilePath: "./log.txt",
             timestampFormat: "YYYY-MM-DD HH:mm:ss"
         }
-        log = SimpleNodeLogger.createSimpleLogger(opts);
-        log.info(inputData);
-        // log.color();
+    log = SimpleNodeLogger.createSimpleLogger(opts);
+    log.info(inputData);
+    // log.color();
 }
 
