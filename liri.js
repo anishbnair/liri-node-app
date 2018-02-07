@@ -56,6 +56,7 @@ function liriBot(liriBotAction, userInput) {
                 // console.log("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
                 // console.log("It's on Netflix!");
                 // console.log("*********************************************************************************************");
+                logResult("\n");
                 logResult("*********************************************************************************************");
                 logResult("Displaying details of movie: Mr. Nobody since you haven't entered any movie name.");
                 logResult("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
@@ -117,6 +118,7 @@ function movieInfo(movieName) {
             // console.log("* Release Year: " + movieDetails.Year);
             // console.log("* IMDB Rating: " + movieDetails.imdbRating);
 
+            logResult("\n");
             logResult("================================================================================================");
             logResult("* Title of the movie: " + movieDetails.Title);
             logResult("* Release Year: " + movieDetails.Year);
@@ -162,7 +164,7 @@ function twitterInfo() {
 
     var Twitter = require('twitter');
     var client = new Twitter(liriKeys.twitter);
-    console.log(client);
+    // console.log(client);
 
     // / Search parameters to get last 20 tweets
     var params = {
@@ -180,7 +182,10 @@ function twitterInfo() {
             // console.log(util.inspect(tweets.statuses, { depth: null, colors: true }));
 
             // Loops through tweets and prints out tweet text and creation date
-            console.log("================================================================================================");
+            // console.log("================================================================================================");
+            logResult("\n");
+            logResult("================================================================================================");
+            logResult("Your last 20 tweets are below (displaying lastest tweet first): ");
 
             for (var i = 0; i < tweets.statuses.length; i++) {
 
@@ -189,18 +194,23 @@ function twitterInfo() {
 
                 var tweetCreationDate = tweets.statuses[i].created_at;
                 // console.log(tweetCreationDate);
-                console.log("Tweet# " + [i + 1]);
-                console.log(" * Creation Date: " + tweetCreationDate);
+                // console.log("Tweet# " + [i + 1]);
+                logResult("Tweet# " + [i + 1]);
+                // console.log(" * Creation Date: " + tweetCreationDate);
+                logResult(" * Creation Date: " + tweetCreationDate);
 
                 // console.log("Tweet text is " + tweetText);
                 // console.log("Tweet# " + [i + 1] + ": Tweet text is " + tweetText);
-                console.log(" * Text: " + tweetText);
+                // console.log(" * Text: " + tweetText);
+                logResult(" * Text: " + tweetText);
 
             }
         } else {
-            console.log(error);
+            // console.log(error);
+            logResult(error);
         }
-        console.log("================================================================================================");
+        // console.log("================================================================================================");
+        logResult("================================================================================================");
     });
 }
 
