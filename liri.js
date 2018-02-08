@@ -27,7 +27,7 @@ function liriBot(liriBotAction) {
             type: "list",
             name: "command",
             message: "Hello, I am Liri Bot. What would you like me to do?",
-            choices: ["Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file"]
+            choices: ["Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file", "Exit"]
 
         }
     ]).then(function (answer) {
@@ -55,6 +55,10 @@ function liriBot(liriBotAction) {
 
             case "Search the song mentioned in random text file":
                 doWhatItSays();
+                break;
+
+            case "Exit":
+                logResult("Thank you! Please enter 'node liri.js' to begin again!");
                 break;
         }
     })
