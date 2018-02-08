@@ -38,7 +38,6 @@ function liriBot() {
 
             case "Search for a movie":
                 movieInfo();
-                // liriBot();
                 break;
 
             case "Search for a song":
@@ -91,18 +90,16 @@ function movieInfo() {
         console.log(movieName);
 
         if (movieName === "") {
-            logResult("\n");
-            logResult("*********************************************************************************************");
-            logResult("Displaying details of movie: Mr. Nobody since you haven't entered any movie name.");
-            logResult("If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/");
-            logResult("It's on Netflix!");
+
+            logResult("\n*********************************************************************************************" +
+                "\nDisplaying details of movie: Mr. Nobody since you haven't entered any movie name." +
+                "\nIf you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/" +
+                "\nIt's on Netflix!");
             movieName = "Mr. Nobody";
         }
 
         // Then run a request to the OMDB API with the movie specified
         var movieQueryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + movieAPI;
-
-        console.log(movieQueryUrl);
 
         request(movieQueryUrl, function (error, response, body) {
 
@@ -112,12 +109,6 @@ function movieInfo() {
                 // Parse the body of the site and recover the movie details
                 var movieDetails = JSON.parse(body);
 
-                logResult("\n");
-                logResult("================================================================================================");
-                logResult("* Title of the movie: " + movieDetails.Title);
-                logResult("* Release Year: " + movieDetails.Year);
-                logResult("* IMDB Rating: " + movieDetails.imdbRating);
-
                 var movieRating = movieDetails.Ratings;
 
                 if (movieRating != "") {
@@ -126,30 +117,29 @@ function movieInfo() {
 
                         if (movieRating[i].Source === "Rotten Tomatoes") {
 
-                            logResult("* Rotten Tomatoes Rating: " + movieRating[i].Value);
+                            var rottenTomatoesRating = movieRating[i].Value;
 
                         }
+
                     }
 
                 } else {
 
-                    logResult("* Rotten Tomatoes Rating: Rating information is not available");
+                    rottenTomatoesRating = "* Rotten Tomatoes Rating: Rating information is not available for this movie";
                 }
 
-                logResult("* Country where the movie was produced: " + movieDetails.Country);
-                logResult("* Language of the movie: " + movieDetails.Language);
-                logResult("* Plot of the movie: " + movieDetails.Plot);
-                logResult("* Actors in the movie: " + movieDetails.Actors);
-
+                logResult("\n================================================================================================" +
+                    "\n* Title of the movie: " + movieDetails.Title + "\n* Release Year: " + movieDetails.Year +
+                    "\n* IMDB Rating: " + movieDetails.imdbRating + "\n* Rotten Tomatoes Rating: " + rottenTomatoesRating +
+                    "\n* Country where the movie was produced: " + movieDetails.Country + "\n* Language of the movie: " + movieDetails.Language +
+                    "\n* Actors in the movie: " + movieDetails.Actors + "\n* Plot of the movie: " + movieDetails.Plot +
+                    "\n================================================================================================" +
+                    "\n" + "\n");
             }
-
-            // liriBot();
         })
 
         // liriBot();
-
     })
-    // liriBot();
 
 }
 
@@ -170,9 +160,8 @@ function twitterInfo() {
     client.get('search/tweets', params, function (error, tweets, response) {
         if (!error) {
 
-            logResult("\n");
-            logResult("================================================================================================");
-            logResult("Your last 20 tweets are below (displaying lastest tweet first): ");
+            logResult("\n================================================================================================" +
+                "\nYour last 20 tweets are below (displaying lastest tweet first):");
 
             for (var i = 0; i < tweets.statuses.length; i++) {
 
@@ -182,9 +171,16 @@ function twitterInfo() {
                 logResult("Tweet# " + [i + 1]);
                 logResult(" * Creation Date: " + tweetCreationDate);
                 logResult(" * Text: " + tweetText);
+                logResult("\n");
+
             }
+
+            logResult("\n================================================================================================" + "\n" + "\n");
+
         } else {
+
             logResult(error);
+
         }
     });
 }
@@ -210,9 +206,9 @@ function spotifyInfo() {
         console.log(songName);
 
         if (songName === "") {
-            logResult("\n");
-            logResult("*********************************************************************************************");
-            logResult("Displaying details of song: The sign Ace of Base since you haven't entered any song title.");
+
+            logResult("\n*********************************************************************************************" +
+                "\nDisplaying details of song: The sign Ace of Base since you haven't entered any song title.");
             songName = "The sign Ace of Base";
         }
 
@@ -231,12 +227,10 @@ function spotifyInfo() {
             var artistsName = songTracks[i].album.artists[i].name;
             var previewUrl = songTracks[i].preview_url;
 
-            logResult("\n");
-            logResult("================================================================================================");
-            logResult("* The song's name: " + song);
-            logResult("* The album name : " + albumName);
-            logResult("* Artist(s): " + artistsName);
-            logResult("* Preview link: " + previewUrl);
+            logResult("\n================================================================================================" +
+                "\n* The song's name: " + song + "\n* The album name : " + albumName + "\n* Artist(s): " + artistsName +
+                "\n* Preview link: " + previewUrl + "\n================================================================================================" +
+                "\n" + "\n");
         })
     })
 }
@@ -277,12 +271,10 @@ function doWhatItSays() {
                 var artistsName = songTracks[i].album.artists[i].name;
                 var previewUrl = songTracks[i].preview_url;
 
-                logResult("\n");
-                logResult("================================================================================================");
-                logResult("* The song's name: " + song);
-                logResult("* The album name : " + albumName);
-                logResult("* Artist(s): " + artistsName);
-                logResult("* Preview link: " + previewUrl);
+                logResult("\n================================================================================================" +
+                    "\n* The song's name: " + song + "\n* The album name : " + albumName + "\n* Artist(s): " + artistsName +
+                    "\n* Preview link: " + previewUrl + "\n================================================================================================" +
+                    "\n" + "\n");
             })
         }
     })
@@ -315,10 +307,11 @@ function logResult(inputData) {
 
     var SimpleNodeLogger = require("simple-node-logger"),
         opts = {
-            logFilePath: "./log.txt",
-            timestampFormat: "YYYY-MM-DD HH:mm:ss"
+            timestampFormat: "YYYY-MM-DD HH:mm:ss",
+            logFilePath: "./log.txt"
+
         }
     log = SimpleNodeLogger.createSimpleLogger(opts);
     log.info(inputData);
-    // log.color();    
+    // log.color;    
 }
