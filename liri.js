@@ -312,5 +312,5 @@ function logResult(inputData) {
         }
     log = SimpleNodeLogger.createSimpleLogger(opts);
     log.info(inputData);
-    // log.color;    
+    // log.color
 }
