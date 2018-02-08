@@ -1,113 +1,168 @@
-2018-02-07 13:26:58 INFO  
+2018-02-08 15:00:15 INFO  
+*********************************************************************************************
+Displaying details of movie: Mr. Nobody since you haven't entered any movie name.
+If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/
+It's on Netflix! 
+2018-02-08 15:00:15 INFO  
+================================================================================================
+* Title of the movie: Mr. Nobody
+* Release Year: 2009
+* IMDB Rating: 7.9
+* Rotten Tomatoes Rating: 66%
+* Country where the movie was produced: Belgium, Germany, Canada, France, USA, UK
+* Language of the movie: English, Mohawk
+* Actors in the movie: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+* Plot of the movie: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+================================================================================================
+
  
-2018-02-07 13:26:58 INFO  ================================================================================================ 
-2018-02-07 13:26:58 INFO  * Title of the movie: Forrest Gump 
-2018-02-07 13:26:58 INFO  * Release Year: 1994 
-2018-02-07 13:26:58 INFO  * IMDB Rating: 8.8 
-2018-02-07 13:26:58 INFO  * Country where the movie was produced: USA 
-2018-02-07 13:26:58 INFO  * Plot of the movie: The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75. 
-2018-02-07 13:26:58 INFO  * Language of the movie: English 
-2018-02-07 13:26:58 INFO  * Actors in the movie: Tom Hanks, Rebecca Williams, Sally Field, Michael Conner Humphreys 
-2018-02-07 13:26:58 INFO  * Rotten Tomatoes Rating: 71% 
-2018-02-07 13:27:07 INFO  
+2018-02-08 15:00:59 INFO  
+================================================================================================
+* Title of the movie: Forrest Gump
+* Release Year: 1994
+* IMDB Rating: 8.8
+* Rotten Tomatoes Rating: 71%
+* Country where the movie was produced: USA
+* Language of the movie: English
+* Actors in the movie: Tom Hanks, Rebecca Williams, Sally Field, Michael Conner Humphreys
+* Plot of the movie: The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.
+================================================================================================
+
  
-2018-02-07 13:27:07 INFO  ********************************************************************************************* 
-2018-02-07 13:27:07 INFO  Displaying details of movie: Mr. Nobody since you haven't entered any movie name. 
-2018-02-07 13:27:07 INFO  It's on Netflix! 
-2018-02-07 13:27:07 INFO  If you haven't watched it, then you should: http://www.imdb.com/title/tt0485947/ 
-2018-02-07 13:27:07 INFO  
+2018-02-08 15:01:26 INFO  
+*********************************************************************************************
+Displaying details of song: The sign Ace of Base since you haven't entered any song title. 
+2018-02-08 15:01:27 INFO  
+================================================================================================
+* The song's name: The Sign
+* The album name : The Sign (US Album) [Remastered]
+* Artist(s): Ace of Base
+* Preview link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=e6059adf1b8e42f7bb54877a02bac0da
+================================================================================================
+
  
-2018-02-07 13:27:07 INFO  ================================================================================================ 
-2018-02-07 13:27:07 INFO  * Title of the movie: Mr. Nobody 
-2018-02-07 13:27:07 INFO  * Release Year: 2009 
-2018-02-07 13:27:07 INFO  * IMDB Rating: 7.9 
-2018-02-07 13:27:07 INFO  * Rotten Tomatoes Rating: 66% 
-2018-02-07 13:27:07 INFO  * Country where the movie was produced: Belgium, Germany, Canada, France, USA, UK 
-2018-02-07 13:27:07 INFO  * Language of the movie: English, Mohawk 
-2018-02-07 13:27:07 INFO  * Plot of the movie: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible. 
-2018-02-07 13:27:07 INFO  * Actors in the movie: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham 
-2018-02-07 13:27:35 INFO  
+2018-02-08 15:01:39 INFO  
+================================================================================================
+* The song's name: Bye Bye Bye
+* The album name : No Strings Attached
+* Artist(s): *NSYNC
+* Preview link: https://p.scdn.co/mp3-preview/72b91cb27fac7beb50a2deffdd8b821fba5ba950?cid=e6059adf1b8e42f7bb54877a02bac0da
+================================================================================================
+
  
-2018-02-07 13:27:35 INFO  ================================================================================================ 
-2018-02-07 13:27:35 INFO  * The song's name: I Want It That Way 
-2018-02-07 13:27:35 INFO  * The album name : The Hits--Chapter One 
-2018-02-07 13:27:35 INFO  * Artist(s): Backstreet Boys 
-2018-02-07 13:27:35 INFO  * Preview link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=e6059adf1b8e42f7bb54877a02bac0da 
-2018-02-07 13:27:51 INFO  
+2018-02-08 15:01:52 INFO  
+================================================================================================
+* The song's name: I Want It That Way
+* The album name : The Hits--Chapter One
+* Artist(s): Backstreet Boys
+* Preview link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=e6059adf1b8e42f7bb54877a02bac0da
+================================================================================================
  
-2018-02-07 13:27:51 INFO  ================================================================================================ 
-2018-02-07 13:27:51 INFO  * The song's name: The Sign 
-2018-02-07 13:27:51 INFO  * The album name : The Sign (US Album) [Remastered] 
-2018-02-07 13:27:51 INFO  * Artist(s): Ace of Base 
-2018-02-07 13:27:51 INFO  * Preview link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=e6059adf1b8e42f7bb54877a02bac0da 
-2018-02-07 13:28:07 INFO  
  
-2018-02-07 13:28:07 INFO  ================================================================================================ 
-2018-02-07 13:28:07 INFO  * The song's name: Bye Bye Bye 
-2018-02-07 13:28:07 INFO  * The album name : No Strings Attached 
-2018-02-07 13:28:07 INFO  * Artist(s): *NSYNC 
-2018-02-07 13:28:07 INFO  * Preview link: https://p.scdn.co/mp3-preview/72b91cb27fac7beb50a2deffdd8b821fba5ba950?cid=e6059adf1b8e42f7bb54877a02bac0da 
-2018-02-07 13:28:15 INFO  
+2018-02-08 15:05:21 INFO  
+================================================================================================
+Your last 20 tweets are below (displaying lastest tweet first): 
+2018-02-08 15:05:21 INFO  Tweet# 1 
+2018-02-08 15:05:21 INFO   * Creation Date: Wed Feb 07 15:55:18 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: Yay.....😀 
+2018-02-08 15:05:21 INFO  
  
-2018-02-07 13:28:15 INFO  ================================================================================================ 
-2018-02-07 13:28:15 INFO  Your last 20 tweets are below (displaying lastest tweet first):  
-2018-02-07 13:28:15 INFO  Tweet# 1 
-2018-02-07 13:28:15 INFO   * Creation Date: Wed Feb 07 15:55:18 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: Yay.....😀 
-2018-02-07 13:28:15 INFO  Tweet# 2 
-2018-02-07 13:28:15 INFO   * Creation Date: Wed Feb 07 15:49:56 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: All JavaScript objects inherit properties and methods from a prototype. 
-2018-02-07 13:28:15 INFO  Tweet# 3 
-2018-02-07 13:28:15 INFO   * Creation Date: Wed Feb 07 15:48:58 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: In JavaScript, objects are king. If you understand objects, you understand JavaScript. 
-2018-02-07 13:28:15 INFO  Tweet# 4 
-2018-02-07 13:28:15 INFO   * Creation Date: Wed Feb 07 15:48:13 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: In JavaScript, the thing called this is the object that "owns" the code. The value of this, when used in an object, is the object itself. 
-2018-02-07 13:28:15 INFO  Tweet# 5 
-2018-02-07 13:28:15 INFO   * Creation Date: Wed Feb 07 15:47:35 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: Sometimes we need a "blueprint" for creating many objects of the same "type". The way to create an "object type", i… https://t.co/iHJF9z43Zq 
-2018-02-07 13:28:15 INFO  Tweet# 6 
-2018-02-07 13:28:15 INFO   * Creation Date: Wed Feb 07 15:46:21 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: It is considered good practice to name constructor functions with an upper-case first letter. 
-2018-02-07 13:28:15 INFO  Tweet# 7 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:41:26 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: A package in Node.js contains all the files you need for a module. 
-2018-02-07 13:28:15 INFO  Tweet# 8 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:40:29 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: NPM is a package manager for Node.js packages, or modules if you like. 
-2018-02-07 13:28:15 INFO  Tweet# 9 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:38:20 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: To delete a file with the File System module,  use the fs.unlink() method. 
-2018-02-07 13:28:15 INFO  Tweet# 10 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:37:08 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: The fs.writeFile() method replaces the specified file and content if it exists. If the file does not exist, a new f… https://t.co/CAoNKqM2sJ 
-2018-02-07 13:28:15 INFO  Tweet# 11 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:36:38 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: The fs.appendFile() method appends specified content to a file. If the file does not exist, the file will be created. 
-2018-02-07 13:28:15 INFO  Tweet# 12 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:35:51 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: The fs.readFile() method is used to read files on your computer. 
-2018-02-07 13:28:15 INFO  Tweet# 13 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:35:01 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: Common use for the File System module: Read files, Create files, Update files, Delete files, Rename files. 
-2018-02-07 13:28:15 INFO  Tweet# 14 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:34:20 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: The Node.js file system module allow you to work with the file system on your computer. 
-2018-02-07 13:28:15 INFO  Tweet# 15 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:33:04 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: To include a module, use the require() function with the name of the module. 
-2018-02-07 13:28:15 INFO  Tweet# 16 
-2018-02-07 13:28:15 INFO   * Creation Date: Mon Feb 05 22:32:14 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: Module in Node.js - Consider modules to be the same as JavaScript libraries. A set of functions you want to include in your application. 
-2018-02-07 13:28:15 INFO  Tweet# 17 
-2018-02-07 13:28:15 INFO   * Creation Date: Sun Feb 04 19:51:55 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: Node.js can generate dynamic page content. Node.js can create, open, read, write, delete, and close files on the se… https://t.co/bOSgEoVU2Y 
-2018-02-07 13:28:15 INFO  Tweet# 18 
-2018-02-07 13:28:15 INFO   * Creation Date: Sun Feb 04 19:50:49 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: Node.js uses asynchronous programming! Node.js runs single-threaded, non-blocking, asynchronously programming, whic… https://t.co/tnefIedTrP 
-2018-02-07 13:28:15 INFO  Tweet# 19 
-2018-02-07 13:28:15 INFO   * Creation Date: Sun Feb 04 19:49:49 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: Node.js is an open source server framework. Node.js is free. Node.js runs on various platforms (Windows, Linux, Uni… https://t.co/5uni1Cs3bq 
-2018-02-07 13:28:15 INFO  Tweet# 20 
-2018-02-07 13:28:15 INFO   * Creation Date: Sat Feb 03 17:54:20 +0000 2018 
-2018-02-07 13:28:15 INFO   * Text: node.js is fun 😀 
+2018-02-08 15:05:21 INFO  Tweet# 2 
+2018-02-08 15:05:21 INFO   * Creation Date: Wed Feb 07 15:49:56 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: All JavaScript objects inherit properties and methods from a prototype. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 3 
+2018-02-08 15:05:21 INFO   * Creation Date: Wed Feb 07 15:48:58 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: In JavaScript, objects are king. If you understand objects, you understand JavaScript. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 4 
+2018-02-08 15:05:21 INFO   * Creation Date: Wed Feb 07 15:48:13 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: In JavaScript, the thing called this is the object that "owns" the code. The value of this, when used in an object, is the object itself. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 5 
+2018-02-08 15:05:21 INFO   * Creation Date: Wed Feb 07 15:47:35 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: Sometimes we need a "blueprint" for creating many objects of the same "type". The way to create an "object type", i… https://t.co/iHJF9z43Zq 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 6 
+2018-02-08 15:05:21 INFO   * Creation Date: Wed Feb 07 15:46:21 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: It is considered good practice to name constructor functions with an upper-case first letter. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 7 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:41:26 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: A package in Node.js contains all the files you need for a module. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 8 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:40:29 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: NPM is a package manager for Node.js packages, or modules if you like. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 9 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:38:20 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: To delete a file with the File System module,  use the fs.unlink() method. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 10 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:37:08 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: The fs.writeFile() method replaces the specified file and content if it exists. If the file does not exist, a new f… https://t.co/CAoNKqM2sJ 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 11 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:36:38 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: The fs.appendFile() method appends specified content to a file. If the file does not exist, the file will be created. 
+2018-02-08 15:05:21 INFO  Tweet# 12 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:35:51 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: The fs.readFile() method is used to read files on your computer. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 13 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:35:01 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: Common use for the File System module: Read files, Create files, Update files, Delete files, Rename files. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 14 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:34:20 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: The Node.js file system module allow you to work with the file system on your computer. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 15 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:33:04 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: To include a module, use the require() function with the name of the module. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 16 
+2018-02-08 15:05:21 INFO   * Creation Date: Mon Feb 05 22:32:14 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: Module in Node.js - Consider modules to be the same as JavaScript libraries. A set of functions you want to include in your application. 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 17 
+2018-02-08 15:05:21 INFO   * Creation Date: Sun Feb 04 19:51:55 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: Node.js can generate dynamic page content. Node.js can create, open, read, write, delete, and close files on the se… https://t.co/bOSgEoVU2Y 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 18 
+2018-02-08 15:05:21 INFO   * Creation Date: Sun Feb 04 19:50:49 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: Node.js uses asynchronous programming! Node.js runs single-threaded, non-blocking, asynchronously programming, whic… https://t.co/tnefIedTrP 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 19 
+2018-02-08 15:05:21 INFO   * Creation Date: Sun Feb 04 19:49:49 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: Node.js is an open source server framework. Node.js is free. Node.js runs on various platforms (Windows, Linux, Uni… https://t.co/5uni1Cs3bq 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  Tweet# 20 
+2018-02-08 15:05:21 INFO   * Creation Date: Sat Feb 03 17:54:20 +0000 2018 
+2018-02-08 15:05:21 INFO   * Text: node.js is fun 😀 
+2018-02-08 15:05:21 INFO  
+ 
+2018-02-08 15:05:21 INFO  
+================================================================================================
+
+ 
