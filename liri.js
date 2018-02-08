@@ -138,9 +138,8 @@ function movieInfo() {
             }
         })
 
-        // liriBot();
     })
-
+    
 }
 
 
