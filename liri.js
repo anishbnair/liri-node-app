@@ -21,13 +21,13 @@ var request = require("request");
 var inquirer = require("inquirer");
 
 
-function liriBot(liriBotAction) {
+function liriBot() {
     inquirer.prompt([
         {
             type: "list",
             name: "command",
             message: "Hello, I am Liri Bot. What would you like me to do?",
-            choices: ["Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file", "Exit"]
+            choices: ["Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file", "Ask me to speak", "Exit"]
 
         }
     ]).then(function (answer) {
@@ -39,6 +39,7 @@ function liriBot(liriBotAction) {
 
             case "Search for a movie":
                 movieInfo();
+                // liriBot();
                 break;
 
             case "Search for a song":
@@ -57,14 +58,18 @@ function liriBot(liriBotAction) {
                 doWhatItSays();
                 break;
 
+            case "Ask me to speak":
+                liriSpeak();
+                break;
+
             case "Exit":
-                logResult("Thank you! Please enter 'node liri.js' to begin again!");
+                console.log("Thank you! Please enter 'node liri.js' to chat with me again!");
                 break;
         }
     })
 }
 
-liriBot(liriBotAction);
+liriBot();
 
 
 
@@ -78,7 +83,7 @@ function movieInfo() {
         {
             type: "input",
             name: "movie",
-            message: "Enter movie title to get details of the song: ",
+            message: "Enter movie title to get details of the movie: ",
         }
 
     ]).then(function (userInput) {
@@ -153,10 +158,17 @@ function movieInfo() {
                 logResult("* Actors in the movie: " + movieDetails.Actors);
                 // logResult("================================================================================================");
                 // logResult("\n");
+                // liriBot();
+
             }
+
+            // liriBot();
         })
 
+        // liriBot();
+
     })
+    // liriBot();
 
 }
 
@@ -366,6 +378,32 @@ function doWhatItSays() {
 }
 
 
+
+function liriSpeak() {
+
+    var say = require("say");
+
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "bot",
+            message: "What do you want me to speak?",
+        }
+
+    ]).then(function (userInput) {
+
+        var botSpeak = "";
+        botSpeak = userInput.bot;
+        // console.log(botSpeak);
+
+        say.speak(botSpeak);
+
+    })
+
+}
+
+
+
 // Function to log result in log.txt and terminal using NPM package simple-node-logger
 function logResult(inputData) {
 
@@ -376,5 +414,6 @@ function logResult(inputData) {
         }
     log = SimpleNodeLogger.createSimpleLogger(opts);
     log.info(inputData);
-    // log.color();
+    // log.color(); 
+
 }
