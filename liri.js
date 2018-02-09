@@ -20,19 +20,19 @@ var request = require("request");
 var inquirer = require("inquirer");
 
 
+// Main function
 function liriBot() {
     inquirer.prompt([
         {
             type: "list",
             name: "command",
-            message: "Hello, I am Liri Bot. What would you like me to do?",
-            choices: ["Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file", "Ask me to speak", "Exit"]
+            message: "HELLO, I AM LIRI BOT." + "\nPLEASE PRESS UP AND DOWN KEYS TO INTERACT WITH ME UNTIL YOU CHOOSE EXIT OPTION." + "\nREFER LOG.TXT FILE FOR SEARCH RESULTS LOG." + "\nWHAT WOULD YOU LIKE ME TO DO?",
+            choices: ["Ask me to speak", "Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file", "Exit"]
 
         }
     ]).then(function (answer) {
 
         liriBotAction = answer.command;
-        console.log(liriBotAction);
 
         switch (liriBotAction) {
 
@@ -61,7 +61,7 @@ function liriBot() {
                 break;
 
             case "Exit":
-                console.log("Thank you! Please enter 'node liri.js' to chat with me again!");
+                console.log("THANK YOU! PLEASE ENTER 'node liri.js' TO CHAT WITH ME AGAIN!");
                 break;
         }
     })
@@ -137,9 +137,9 @@ function movieInfo() {
                     "\n" + "\n");
             }
         })
-
+        liriBot();
     })
-    
+
 }
 
 
@@ -181,6 +181,7 @@ function twitterInfo() {
             logResult(error);
 
         }
+        liriBot();
     });
 }
 
@@ -230,8 +231,11 @@ function spotifyInfo() {
                 "\n* The song's name: " + song + "\n* The album name : " + albumName + "\n* Artist(s): " + artistsName +
                 "\n* Preview link: " + previewUrl + "\n================================================================================================" +
                 "\n" + "\n");
+
+            liriBot();
         })
     })
+
 }
 
 
@@ -274,13 +278,16 @@ function doWhatItSays() {
                     "\n* The song's name: " + song + "\n* The album name : " + albumName + "\n* Artist(s): " + artistsName +
                     "\n* Preview link: " + previewUrl + "\n================================================================================================" +
                     "\n" + "\n");
+
+                liriBot();
             })
         }
     })
+
 }
 
 
-
+// Function to speak using 'say' NPM package
 function liriSpeak() {
 
     var say = require("say");
@@ -297,6 +304,8 @@ function liriSpeak() {
         var botSpeak = "";
         botSpeak = userInput.bot;
         say.speak(botSpeak);
+
+        liriBot();
     })
 }
 
@@ -312,5 +321,5 @@ function logResult(inputData) {
         }
     log = SimpleNodeLogger.createSimpleLogger(opts);
     log.info(inputData);
-    // log.color
+
 }
