@@ -23,21 +23,21 @@ LIRI Bot is a Language Interpretation and Recognition Interface. It is a command
     -  Liri logs all your search results in log.txt with date and time stamp!
 
 ## Installs:
-The <a ref="https://github.com/anishbnair/liri-node-app/blob/master/package.json">package.json</a>  lists dependent node packages, but for your convenvice, these are the ones to install.
+The [package.json] (https://github.com/anishbnair/liri-node-app/blob/master/package.json). lists dependent node packages, but for your convenvice, these are the ones to install.
 
-* <a ref="https://www.npmjs.com/package/twitter">Twitter</a>
+* [Twitter] (https://www.npmjs.com/package/twitter).
     - npm install twitter
 
-* <a ref="https://www.npmjs.com/package/node-spotify-api">Spotify</a>
+* [Spotify] (https://www.npmjs.com/package/node-spotify-api).
     - npm install --save node-spotify-api
 
-* <a ref="https://www.npmjs.com/package/say">Say</a>
+* [Say] (https://www.npmjs.com/package/say).
     - npm install simple-node-logger
 
-* <a ref="https://www.npmjs.com/package/request">Simple Node Logger</a>
+* [Simple Node Logger] (https://www.npmjs.com/package/request).
     - npm install simple-node-logger
 
-* <a ref="https://www.npmjs.com/package/request">Request</a>
+* [Request] (https://www.npmjs.com/package/request).
     - npm install request
 
 
