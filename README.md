@@ -25,19 +25,19 @@ LIRI Bot is a Language Interpretation and Recognition Interface. It is a command
 ## Installs:
 The [package.json](https://github.com/anishbnair/liri-node-app/blob/master/package.json). lists dependent node packages, but for your convenvice, these are the ones to install.
 
-* [Twitter](https://www.npmjs.com/package/twitter).
+* [Twitter](https://www.npmjs.com/package/twitter)
     - npm install twitter
 
-* [Spotify](https://www.npmjs.com/package/node-spotify-api).
+* [Spotify](https://www.npmjs.com/package/node-spotify-api)
     - npm install --save node-spotify-api
 
-* [Say](https://www.npmjs.com/package/say).
+* [Say](https://www.npmjs.com/package/say)
     - npm install simple-node-logger
 
-* [Simple Node Logger](https://www.npmjs.com/package/request).
+* [Simple Node Logger](https://www.npmjs.com/package/request)
     - npm install simple-node-logger
 
-* [Request](https://www.npmjs.com/package/request).
+* [Request](https://www.npmjs.com/package/request)
     - npm install request
 
 
