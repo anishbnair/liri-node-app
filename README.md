@@ -2,10 +2,10 @@
 
 LIRI Bot is a Language Interpretation and Recognition Interface. It is a command line node application that takes in parameters and gives you back data.
 
-## LIRI Bot Features:
+## Features:
 
 * Speak
-    - Liri can speak! Just type what you want Liri to speak! Make sure your system is not on mute! 
+    - Liri can speak! Just type what you want Liri to say! Make sure your system is not on mute! 
 
 * Search for a movie
     -  Liri can search a movie for you! Just type movie title!
@@ -23,7 +23,7 @@ LIRI Bot is a Language Interpretation and Recognition Interface. It is a command
     -  Liri logs all your search results in log.txt with date and time stamp!
 
 ## Installs:
-The [package.json](https://github.com/anishbnair/liri-node-app/blob/master/package.json). lists dependent node packages, but for your convenvice, these are the ones to install.
+The [package.json](https://github.com/anishbnair/liri-node-app/blob/master/package.json) lists dependent node packages, but for your convenvice, these are the ones to install.
 
 * [Twitter](https://www.npmjs.com/package/twitter)
     - npm install twitter
@@ -32,7 +32,7 @@ The [package.json](https://github.com/anishbnair/liri-node-app/blob/master/packa
     - npm install --save node-spotify-api
 
 * [Say](https://www.npmjs.com/package/say)
-    - npm install simple-node-logger
+    - npm install say
 
 * [Simple Node Logger](https://www.npmjs.com/package/request)
     - npm install simple-node-logger
@@ -42,7 +42,7 @@ The [package.json](https://github.com/anishbnair/liri-node-app/blob/master/packa
 
 
 ## Get Started
-* Type node liri.js to begin
+* Type node liri.js on the terminal to begin
 * Liri will prompt choices 
     - Speak
     - Search for a movie
@@ -50,4 +50,7 @@ The [package.json](https://github.com/anishbnair/liri-node-app/blob/master/packa
     - Get my latest 20 tweets
     - Search the song mentioned in random text file
     - Exit
-* Select options using up or down keys until you choose Exit option
+* Select option using up or down keys and enter input (e.g. movie title, song title etc.) and Liri gives you back data
+* Liri will search for a default movie/song if you don't enter movie/song title
+* Use up or down keys to select next choice
+* Choose Exit option to get out of the application
