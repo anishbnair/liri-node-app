@@ -1,17 +1,10 @@
 
 require("dotenv").config();
 
-var util = require('util');
+// var util = require('util');
 
 // Load keys.js file
 var liriKeys = require("./keys.js");
-
-// Store Liri Bot actions (i.e. "my-tweets", "spotify-this-song", "movie-this", "do-what-it-says") as per user input
-var liriBotAction = process.argv[2];
-
-// Create an empty variable for holding the user response (e.g. movie/song name)
-var userInput = "";
-
 
 // Load the NPM Package request
 var request = require("request");
@@ -27,7 +20,7 @@ function liriBot() {
             type: "list",
             name: "command",
             message: "HELLO, I AM LIRI BOT." + "\nPLEASE PRESS UP AND DOWN KEYS TO INTERACT WITH ME UNTIL YOU CHOOSE EXIT OPTION." + "\nREFER LOG.TXT FILE FOR SEARCH RESULTS LOG." + "\nWHAT WOULD YOU LIKE ME TO DO?",
-            choices: ["Ask me to speak", "Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file", "Exit"]
+            choices: ["Speak", "Search for a movie", "Search for a song", "Get my latest 20 tweets", "Search the song mentioned in random text file", "Exit"]
 
         }
     ]).then(function (answer) {
@@ -56,7 +49,7 @@ function liriBot() {
                 doWhatItSays();
                 break;
 
-            case "Ask me to speak":
+            case "Speak":
                 liriSpeak();
                 break;
 
@@ -139,7 +132,6 @@ function movieInfo() {
         })
         liriBot();
     })
-
 }
 
 
